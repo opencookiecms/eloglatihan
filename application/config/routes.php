@@ -53,6 +53,7 @@ $route['default_controller'] = 'maincontroller';
 
 $route['daftar-kursus'] = 'maincontroller/addKursus';
 $route['daftar-user'] = 'maincontroller/addUsers';
+$route['kemaskini-pengguna/(:num)'] = 'maincontroller/updateUser/$1';
 $route['users'] = 'maincontroller/userList';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

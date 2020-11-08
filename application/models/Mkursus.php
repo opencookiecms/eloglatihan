@@ -35,11 +35,12 @@ class Mkursus extends CI_Model {
         return $this->db->insert('kursus',$data);
     }
 
-    public function addUsers()
+    public function addUsers($data='')
     {
         $data = array(
 
             'nobadan'=>$this->input->post('nobadan'),
+            'gambar'=>$data,
             'nama'=>$this->input->post('nama'),
             'nokp'=>$this->input->post('nokp'),
             'jawatan'=>$this->input->post('jawatan'),
@@ -59,6 +60,36 @@ class Mkursus extends CI_Model {
         $query = $this->db->get();
 
         return $query->result();
+    }
+
+    public function getUsersbyid($id)
+    {
+        $this->db->select('*');
+        $this->db->from('usersbomba');
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+
+        return $query->result();
+    }
+
+    public function updateuserp($data="", $context, $id)
+    {
+        $context = array(
+
+            'nobadan'=>$this->input->post('nobadan'),
+            'gambar'=>$data,
+            'nama'=>$this->input->post('nama'),
+            'nokp'=>$this->input->post('nokp'),
+            'jawatan'=>$this->input->post('jawatan'),
+            'gredjawatan'=>$this->input->post('gredjawatan'),
+            'unitsokongan'=>$this->input->post('unitsokongan'),
+            'groupUnit'=>$this->input->post('groupUnit')
+
+        );
+
+        $this->db->where('id', $id);
+        $this->db->update('usersbomba',$context);
+      
     }
     
 
