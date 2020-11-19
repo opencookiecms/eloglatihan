@@ -20,6 +20,16 @@ class Mkursus extends CI_Model {
         return $query->result();
     }
 
+    public function getkbyid($id)
+    {
+        $this->db->select('*');
+        $this->db->from('kursus');
+        $this->db->where('kid',$id);
+        $query = $this->db->get();
+
+        return $query->result();
+    }
+
     public function kaddProcess()
     {
         $data = array(

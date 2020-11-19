@@ -1,9 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class maincontroller extends CI_Controller {
-
-
+class  Maincontroller extends CI_Controller {
     
     public function __construct()
     {
@@ -11,7 +9,6 @@ class maincontroller extends CI_Controller {
         $this->load->helper('url');
 		$this->load->model('Mkursus');
     }
-    
 
     public function index()
     {
@@ -23,6 +20,20 @@ class maincontroller extends CI_Controller {
         $this->load->view('based/nav.php');
         $this->load->view('based/sidebar.php');
         $this->load->view('pages/dashboard.php',$data);
+        $this->load->view('based/footer.php');
+        $this->load->view('based/scripts.php');
+    }
+
+    public function kursus($id="")
+    {
+        $data = array(
+            'getkursusbyid'=>$this->Mkursus->getkbyid($id),
+        );
+
+        $this->load->view('based/head.php');
+        $this->load->view('based/nav.php');
+        $this->load->view('based/sidebar.php');
+        $this->load->view('pages/kursus.php',$data);
         $this->load->view('based/footer.php');
         $this->load->view('based/scripts.php');
     }

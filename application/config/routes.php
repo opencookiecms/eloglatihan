@@ -49,11 +49,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'maincontroller';
-
-$route['daftar-kursus'] = 'maincontroller/addKursus';
-$route['daftar-user'] = 'maincontroller/addUsers';
-$route['kemaskini-pengguna/(:num)'] = 'maincontroller/updateUser/$1';
-$route['users'] = 'maincontroller/userList';
+$route['default_controller'] = 'Maincontroller';
+$route['kursus-qrcode/(:num)'] = 'Maincontroller/kursus/$1';
+$route['daftar-kursus'] = 'Maincontroller/addKursus';
+$route['daftar-user'] = 'Maincontroller/addUsers';
+$route['kemaskini-pengguna/(:num)'] = 'Maincontroller/updateUser/$1';
+$route['users'] = 'Maincontroller/userList';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
