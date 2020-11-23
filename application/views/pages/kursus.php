@@ -38,11 +38,12 @@
                   <th style="width: 10px">#</th>
                   <th>Tajuk Kursus</th>
                   <th>Hari</th>
-                  <th style="width: 40px">QR Code</th>
+                  <th style="width: 100px">QR Code</th>
                 </tr>
 
-                
+             
                 <?php for ($i = 1; $i <= $getkursusbyid[0]->hari; $i++) : ?>
+                
                   <tr>
                     <td><?php echo $i ?></td>
     
@@ -50,7 +51,11 @@
                   <td>
                     <?php echo $i ?> hari
                   </td>
-                  <td><span class="badge bg-green">90%</span></td>
+                  <td>
+                    print qr code here
+              
+                   
+                  </td>
                   
                   
                 </tr>

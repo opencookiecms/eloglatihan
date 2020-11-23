@@ -50,10 +50,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'Maincontroller';
-$route['kursus-qrcode/(:num)'] = 'Maincontroller/kursus/$1';
-$route['daftar-kursus'] = 'Maincontroller/addKursus';
-$route['daftar-user'] = 'Maincontroller/addUsers';
-$route['kemaskini-pengguna/(:num)'] = 'Maincontroller/updateUser/$1';
+$route['kursus/kursus-qrcode/(:num)'] = 'Maincontroller/kursus/$1';
+$route['kursus/daftar-kursus'] = 'Maincontroller/addKursus';
+$route['kursus/add_user'] = 'Maincontroller/add_user_kursus';
+$route['user/daftar-user'] = 'Maincontroller/addUsers';
+$route['user/kemaskini-pengguna/(:num)'] = 'Maincontroller/updateUser/$1';
 $route['users'] = 'Maincontroller/userList';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

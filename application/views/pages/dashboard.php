@@ -119,8 +119,14 @@
                                     <td><?php echo $row->tahun ?></td>
                                     <td><?php echo $row->hari ?></td>
                                     <td><a href="e_kursus?kusId=<?php echo $row->kid ?>" class="btn btn-primary"><i
-                                                class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <a href="kurdel.php?kusId=<?php echo $row->kid ?>" class="btn btn-danger"
+                                                class="fa fa-user" aria-hidden="true"></i></a>
+                                        <a href="kurdel.php?kusId=<?php echo $row->kid ?>" class="btn btn-info"
+                                            role="button" onclick="return confirm('Anda Pasti?');"><i
+                                                class="fa fa-qrcode" aria-hidden="true"></i></a>
+                                                <a href="kurdel.php?kusId=<?php echo $row->kid ?>" class="btn btn-warning"
+                                            role="button" onclick="return confirm('Anda Pasti?');"><i
+                                                class="fa fa-wrench" aria-hidden="true"></i></a>
+                                                <a href="kurdel.php?kusId=<?php echo $row->kid ?>" class="btn btn-danger"
                                             role="button" onclick="return confirm('Anda Pasti?');"><i
                                                 class="fa fa-trash" aria-hidden="true"></i></a>
                                     </td>

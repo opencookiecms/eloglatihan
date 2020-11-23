@@ -41,6 +41,8 @@
 <script src="<?php echo base_url() ?>assets/alte/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url() ?>assets/alte/dist/js/demo.js"></script>
+<script src="<?php echo base_url() ?>assets/qrcodejs/qrcode.min.js"></script>
+<script src="<?php echo base_url() ?>assets/js/qr.js"></script>
 
 <script>
   $(function () {
