@@ -101,6 +101,30 @@ class Mkursus extends CI_Model {
         $this->db->update('usersbomba',$context);
       
     }
+
+
+    public function userInsertK($k)
+    {
+        
+        $z = 0;
+        $data=array(
+            'userid'=> $k,
+            'kursusid' => $this->input->post('hiddenid'),
+            'one' => $z,
+            'two' => $z,
+            'three' => $z,
+            'four' => $z,
+            'five' => $z,
+            'six' => $z,
+            'seven' => $z,
+            'eight' => $z,
+         );
+
+        //Insert the second stage details for your employer into database.
+
+        $this->db->insert('kursusattn', $data);
+    
+    }
     
 
 }

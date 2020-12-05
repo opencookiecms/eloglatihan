@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Simple Tables</title>
-
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -53,11 +46,9 @@
                   </td>
                   <td>
                     print qr code here
-              
-                   
+                    <input type="hidden" value="https://www.google.com/" id="textcode1"/>
+                    <div id="qrcode1"></div>   
                   </td>
-                  
-                  
                 </tr>
                 <?php endfor; ?>
               
