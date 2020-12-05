@@ -45,9 +45,12 @@
                     <?php echo $i ?> hari
                   </td>
                   <td>
-                    print qr code here
-                    <input type="hidden" value="https://www.google.com/" id="textcode1"/>
-                    <div id="qrcode1"></div>   
+                  <a href="<?php echo site_url('kursus/qrgenerate/'.$getkursusbyid[0]->kid.'/'.$i) ?>" class="btn btn-info"
+                                            role="button" onclick="return confirm('Anda Pasti?');"><i
+                                                class="fa fa-qrcode" aria-hidden="true"></i></a>
+
+                  <a href="fg">dddd</a>
+                          
                   </td>
                 </tr>
                 <?php endfor; ?>

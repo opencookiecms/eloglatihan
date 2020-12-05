@@ -24,21 +24,8 @@ class  Maincontroller extends CI_Controller {
         $this->load->view('based/scripts.php');
     }
 
-    public function kursusqr($id="")
-    {
-        $data = array(
-            'getkursusbyid'=>$this->Mkursus->getkbyid($id),
-        );
 
-        $this->load->view('based/head.php');
-        $this->load->view('based/nav.php');
-        $this->load->view('based/sidebar.php');
-        $this->load->view('pages/kursus.php',$data);
-        $this->load->view('based/footer.php');
-        $this->load->view('based/scripts.php');
-    }
-
-    public function add_user_kursus($id="")
+    public function adduserkursus($id="")
     {
         $data = array(
             'getU'=>$this->Mkursus->getUsers(),
@@ -192,21 +179,36 @@ class  Maincontroller extends CI_Controller {
 
     //generate qrcode
 
+
+    
+    public function kursusqr($id="")
+    {
+        $data = array(
+            'getkursusbyid'=>$this->Mkursus->getkbyid($id),
+        );
+
+        $this->load->view('based/head.php');
+        $this->load->view('based/nav.php');
+        $this->load->view('based/sidebar.php');
+        $this->load->view('pages/kursus.php',$data);
+        $this->load->view('based/footer.php');
+        $this->load->view('based/scripts.php');
+    }
+
     public function generateQR($hari="",$idkursus="")
 
     {
 
         $data = array(
-            $harikursus = $hari,
-            $idk = $idkursus,
+            'harikursus'=>$hari,
+            'idk'=>$idkursus,
         );
-
         //process post akan ada dekat sini 
         
         $this->load->view('pages/qrgenerate.php',$data);    
     }
 
-    public function pegesahanid()
+    public function pegesahanid($hari="",$idkursus="")
     {
 
     }
