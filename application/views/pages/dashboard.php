@@ -118,7 +118,7 @@
                                     <td><?php echo $row->tempat ?></td>
                                     <td><?php echo $row->tahun ?></td>
                                     <td><?php echo $row->hari ?></td>
-                                    <td><a href="<?php echo site_url('kursus/add_user/'.$row->kid)?>" class="btn btn-primary"><i
+                                    <td><a href="<?php echo site_url('kursus/add-user/'.$row->kid)?>" class="btn btn-primary"><i
                                                 class="fa fa-user" aria-hidden="true"></i></a>
                                         <a href="kursus/kursus-qrcode/<?php echo $row->kid ?>" class="btn btn-info"
                                             role="button" onclick="return confirm('Anda Pasti?');"><i
